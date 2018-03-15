@@ -20,7 +20,7 @@
     'g' => green
 */
 
-var initial_state = ['g', 'b', 'b', '.', '.'];
+var initial_state = ['b', 'b', 'b', 'b', 'b'];
 
 function main() {
   //////////////////////////////////
@@ -28,16 +28,16 @@ function main() {
   //// v YOUR CODE BELOW HERE v ////
   ////                          ////
   //////////////////////////////////
-// move the blue dot one to the right
+// every n erase
+
+var n = 5;
 
 for (let i = 0; i < initial_state.length; i++) {
-  if (onBlue()) {
-    moveLeft();
+  if ((i + 1) % n === 0) {
     erase();
-    moveRight();
-    moveRight();
+    moveRight(n);
   } else {
-    moveRight();
+    moveRight(); //then you can refactor to remove second else and moveRight
   }
 }
 

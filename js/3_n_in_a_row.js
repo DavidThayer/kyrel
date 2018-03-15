@@ -20,7 +20,7 @@
     'g' => green
 */
 
-var initial_state = ['g', 'b', 'b', '.', '.'];
+var initial_state = ['.', '.', '.', '.', '.'];
 
 function main() {
   //////////////////////////////////
@@ -28,18 +28,18 @@ function main() {
   //// v YOUR CODE BELOW HERE v ////
   ////                          ////
   //////////////////////////////////
-// move the blue dot one to the right
+// for n, draw n in a row
 
-for (let i = 0; i < initial_state.length; i++) {
-  if (onBlue()) {
-    moveLeft();
-    erase();
-    moveRight();
-    moveRight();
-  } else {
-    moveRight();
-  }
+
+var n = 2
+
+useBlue();
+
+for (let i = 0; i < n; i++) {
+  draw();
+  moveRight();
 }
+
 
   //////////////////////////////////
   ////                          ////
